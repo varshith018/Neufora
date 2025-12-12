@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warning</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: red;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 2.5em;
+            animation: blink 1s infinite;
+        }
+        p {
+            font-size: 1.2em;
+            max-width: 90%;
+        }
+        #button {
+            display: none;
+            margin-top: 50px;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 20px red;
+        }
+        #button:hover {
+            background-color: darkred;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            p { font-size: 1em; }
+            #button { font-size: 1.2em; padding: 15px 30px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>WARNING: YOUR DEVICE IS HACKED!</h1>
+    <p>All your data is at risk. Do not close this page!</p>
+    
+    <button id="button" onclick="alert('Happy April Fools\' Day! 😂\nYou got pranked!')">Click below to get rid of it</button>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById('button').style.display = 'block';
+        }, 10000); // 10 seconds delay
+    </script>
+</body>
+</html> 
